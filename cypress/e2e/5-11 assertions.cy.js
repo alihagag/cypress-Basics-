@@ -26,6 +26,8 @@ should('have.length.greaterThan', number)
 
 should ('be.enabled')  ==> checks if the element can be interactable 
 should ('have.value', 'what should it have text wise')  ==> checks if input has text or dropdown has a given value 
+should (be.checked)
+should(not.be.checked)
 ----------------------------------
 
 
@@ -39,7 +41,8 @@ true, so it ina sense it waits to retry
 Cypress is DYNAMIC and as a result it offers an atvantage over other platforms in the sense that it will wait for a designated amount of time 
 to see if the condition is/ can be true before giving you a fail message. 
 
-EXPLICIT: 
+EXPLICIT: avoid using it if possible, unlike implicit it if the condition is false it won wait to rerety for 4 seconds it will just say it failed. 
+this is when you use expect()
 
 
 
